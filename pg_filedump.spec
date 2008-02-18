@@ -1,14 +1,14 @@
-%define	pg_version	8.2.6
+%define	pg_version	7.4.19
 Summary:	PostgreSQL File Dump Utility
 Name:		pg_filedump
-Version:	8.2
+Version:	3.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/Databases
 Source0:	http://sources.redhat.com/rhdb/tools/%{name}-%{version}.tar
-# Source0-md5:	6f052cb339cdb381b21c27eb379abb86
+# Source0-md5:	b17a9bc72c14c27b9161b5669e679328
 Source1:	ftp://ftp.postgresql.org/pub/source/v%{pg_version}/postgresql-%{pg_version}.tar.bz2
-# Source1-md5:	17b9049b4fcad42ee95410833c1db228
+# Source1-md5:	0be8c193fb73113930d043c60200598b
 URL:		http://sources.redhat.com/rhdb/utilities.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,6 +22,10 @@ the understanding of the internal contents of a PostgreSQL block.
 %setup -q -a1
 
 %build
+cd postgresql-%{pg_version} || exit 1
+./configure
+cd ..
+
 %{__make} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
