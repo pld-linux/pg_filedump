@@ -22,6 +22,10 @@ the understanding of the internal contents of a PostgreSQL block.
 %setup -q -a1
 
 %build
+cd postgresql-%{pg_version} || exit 1
+./configure
+cd ..
+
 %{__make} \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
