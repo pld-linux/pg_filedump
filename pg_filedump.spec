@@ -1,14 +1,14 @@
-%define	pg_version	8.2.6
+%define	pg_version	8.3.1
 Summary:	PostgreSQL File Dump Utility
 Name:		pg_filedump
-Version:	8.2
+Version:	8.3
 Release:	1
 License:	GPL v2+
 Group:		Applications/Databases
 Source0:	http://sources.redhat.com/rhdb/tools/%{name}-%{version}.tar
-# Source0-md5:	6f052cb339cdb381b21c27eb379abb86
+# Source0-md5:	d4e6cf9a221e4790b3a4a3ca27276fa0
 Source1:	ftp://ftp.postgresql.org/pub/source/v%{pg_version}/postgresql-%{pg_version}.tar.bz2
-# Source1-md5:	17b9049b4fcad42ee95410833c1db228
+# Source1-md5:	a5e0ed6a85b450dc217ec71da93243a7
 URL:		http://sources.redhat.com/rhdb/utilities.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
