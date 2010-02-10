@@ -1,7 +1,7 @@
 %define	pg_version	8.4.2
 Summary:	PostgreSQL File Dump Utility
 Name:		pg_filedump
-Version:	8.4
+Version:	8.4.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/Databases
@@ -19,7 +19,7 @@ well as dumping straight binary. This utility is intended to aid in
 the understanding of the internal contents of a PostgreSQL block.
 
 %prep
-%setup -q -n %{name}-%{version}.0 -a1
+%setup -q -a1
 
 %build
 cd postgresql-%{pg_version} || exit 1
