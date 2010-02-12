@@ -10,6 +10,8 @@ Source0:	http://sources.redhat.com/rhdb/tools/%{name}-%{version}.tar
 Source1:	ftp://ftp.postgresql.org/pub/source/v%{pg_version}/postgresql-%{pg_version}.tar.bz2
 # Source1-md5:	d738227e2f1f742d2f2d4ab56496c5c6
 URL:		http://sources.redhat.com/rhdb/utilities.html
+BuildRequires:	readline-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
